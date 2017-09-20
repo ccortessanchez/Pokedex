@@ -69,7 +69,7 @@ class PokedexViewController: UITableViewController, ResourceObserver {
         let pokemonSummary = pokemonList[indexPath.row]
         cell.textLabel?.text = pokemonSummary["name"].stringValue.capitalized
         cell.detailTextLabel?.text = "id: \(indexPath.row + 1)"
-        cell.imageView?.image = UIImage(named: "Pokeball.png")
+        cell.imageView?.image = UIImage(named: "Pokeball")
         return cell
     }
     
