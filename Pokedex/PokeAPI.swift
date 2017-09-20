@@ -32,7 +32,7 @@ class _PokeAPI: Service {
     }
     
     //Pokedex limit to 151
-    var pokedex: Resource { return resource("/pokemon").withParam("limit", "151") }
+    var pokedex: Resource { return resource("/pokemon").withParam("limit", "811") }
     
     func pokemon(id: String) -> Resource {
         return pokedex.child(id)
