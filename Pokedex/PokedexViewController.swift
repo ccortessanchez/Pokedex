@@ -12,6 +12,9 @@ import SwiftyJSON
 
 class PokedexViewController: UITableViewController, ResourceObserver {
 
+    @IBOutlet weak var pokemonView: UIImageView!
+    @IBOutlet weak var pokemonName: UILabel!
+    @IBOutlet weak var pokemonID: UILabel!
     
     var statusOverlay = ResourceStatusOverlay()
     
@@ -66,6 +69,7 @@ class PokedexViewController: UITableViewController, ResourceObserver {
         let pokemonSummary = pokemonList[indexPath.row]
         cell.textLabel?.text = pokemonSummary["name"].stringValue.capitalized
         cell.detailTextLabel?.text = "id: \(indexPath.row + 1)"
+        cell.imageView?.image = UIImage(named: "Pokeball.png")
         return cell
     }
     
