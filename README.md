@@ -8,10 +8,10 @@
 ## Road map
 
 - [x] 1st generation 
-- [ ] 2nd generation
+- [x] 2nd generation
 - [ ] Search bar
 - [ ] Order by name
-- [ ] Segmented control
+- [x] Segmented control
 
 ## License
 
