@@ -57,7 +57,6 @@ class PokemonViewController: UIViewController, ResourceObserver {
         if let _pokemon = pokemon {
             let idPokemon = _pokemon.id
             let namePokemon = _pokemon.name.capitalized
-            
             nameLabel?.text = "\(idPokemon): \(namePokemon)"
             imageView?.imageURL = _pokemon.spriteUrlMale
             type1Label?.text = _pokemon.types?[0]
