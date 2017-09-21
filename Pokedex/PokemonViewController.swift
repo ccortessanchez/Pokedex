@@ -27,7 +27,9 @@ class PokemonViewController: UIViewController, ResourceObserver {
     var pokemonResource: Resource? {
         didSet {
             oldValue?.removeObservers(ownedBy: self)
-            pokemonResource?.addObserver(self).addObserver(statusOverlay, owner: self).loadIfNeeded()
+            pokemonResource?.addObserver(self)
+                .addObserver(statusOverlay, owner: self)
+                .loadIfNeeded()
         }
     }
     

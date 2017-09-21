@@ -22,9 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LaunchBackground" highlightedImage="LaunchBackground" translatesAutoresizingMaskIntoConstraints="NO" id="DOj-F6-n9d">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchBackground" highlightedImage="LaunchBackground" translatesAutoresizingMaskIntoConstraints="NO" id="DOj-F6-n9d">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch" translatesAutoresizingMaskIntoConstraints="NO" id="MFR-Yf-bze">
                                 <rect key="frame" x="16" y="269" width="343" height="128"/>
@@ -33,9 +32,15 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="MFR-Yf-bze" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="0wE-Vd-IgG"/>
+                            <constraint firstItem="DOj-F6-n9d" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="18h-qi-0Z2"/>
                             <constraint firstItem="MFR-Yf-bze" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="249" id="4Nf-1v-uKQ"/>
+                            <constraint firstItem="MFR-Yf-bze" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="5OG-cu-y3O"/>
+                            <constraint firstItem="MFR-Yf-bze" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="O89-eM-O7e"/>
+                            <constraint firstItem="DOj-F6-n9d" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="OIQ-qO-Hcc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MFR-Yf-bze" secondAttribute="trailing" id="QsC-D5-IM1"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="DOj-F6-n9d" secondAttribute="bottom" id="oZ1-2q-7gE"/>
                             <constraint firstItem="MFR-Yf-bze" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="pG6-nt-QXx"/>
+                            <constraint firstAttribute="trailing" secondItem="DOj-F6-n9d" secondAttribute="trailing" id="wbm-II-Nd4"/>
                         </constraints>
                     </view>
                 </viewController>

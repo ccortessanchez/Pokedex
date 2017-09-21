@@ -15,6 +15,7 @@ class PokedexViewController: UITableViewController, ResourceObserver {
     @IBOutlet weak var pokemonView: UIImageView!
     @IBOutlet weak var pokemonName: UILabel!
     @IBOutlet weak var pokemonID: UILabel!
+    @IBOutlet weak var generationSegmentedControl: UISegmentedControl!
     
     var statusOverlay = ResourceStatusOverlay()
     
@@ -60,7 +61,6 @@ class PokedexViewController: UITableViewController, ResourceObserver {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // We'll replace 'objects' with 'pokemon' in the blog post
         return pokemonList.count
     }
     
@@ -83,7 +83,20 @@ class PokedexViewController: UITableViewController, ResourceObserver {
         }
     }
 
-
+    @IBAction func changePokedexGen(_ sender: UISegmentedControl) {
+        
+        switch generationSegmentedControl.selectedSegmentIndex {
+        case 0:
+            pokedexResource = PokeAPI.pokedex
+        case 1:
+            pokedexResource = PokeAPI.pokedex1st
+        case 2:
+            pokedexResource = PokeAPI.pokedex2nd
+        default:
+            pokedexResource = PokeAPI.pokedex
+        }
+    }
+    
 
 }
 

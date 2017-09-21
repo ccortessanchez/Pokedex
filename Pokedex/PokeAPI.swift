@@ -32,14 +32,14 @@ class _PokeAPI: Service {
     }
     
     //Pokedex 1st generation
-    var pokedex: Resource { return resource("/pokemon").withParam("limit", "151") }
+    var pokedex1st: Resource { return resource("/pokemon").withParam("limit", "151") }
     //Pokedex ALL
-    //var pokedex: Resource { return resource("/pokemon").withParam("limit", "811") }
+    var pokedex: Resource { return resource("/pokemon").withParam("limit", "811") }
     //Pokedex 2nd generation 
-    //var pokedex: Resource { return resource("/pokemon").withParam("limit", "100").withParam("offset", "151") }
+    var pokedex2nd: Resource { return resource("/pokemon").withParam("limit", "100").withParam("offset", "151") }
     
     func pokemon(id: String) -> Resource {
-        return pokedex.child(id)
+        return pokedex1st.child(id)
     }
 }
 
