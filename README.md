@@ -12,7 +12,7 @@
 - [ ] Search bar
 - [ ] Tab bar for pokedex by generation
 - [ ] Order by name
-- [ ] Segmented control for pokemon detail view
+- [x] Segmented control for pokemon detail view
 
 ## License
 
