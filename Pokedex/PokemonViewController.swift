@@ -68,30 +68,15 @@ class PokemonViewController: UIViewController, ResourceObserver {
     @IBAction func pokemonSpriteControl(_ sender: UISegmentedControl) {
         switch spriteSegmentedControl.selectedSegmentIndex {
         case 0:
-            if let _pokemon = pokemon {
-                nameLabel?.text = _pokemon.name.capitalized
-                imageView?.imageURL = _pokemon.spriteUrlMale
-                type1Label?.text = _pokemon.types?[0]
-                type2Label?.text = _pokemon.types?[1]
-            }
+            imageView?.imageURL = pokemon?.spriteUrlMale
         case 1:
-            if let _pokemon = pokemon {
-                nameLabel?.text = _pokemon.name.capitalized
-                if _pokemon.spriteUrlFemale != nil {
-                    imageView?.imageURL = _pokemon.spriteUrlFemale
-                } else {
-                    imageView?.imageURL = _pokemon.spriteUrlMale
-                }
-                type1Label?.text = _pokemon.types?[0]
-                type2Label?.text = _pokemon.types?[1]
+            if pokemon?.spriteUrlFemale != nil {
+                imageView?.imageURL = pokemon?.spriteUrlFemale
+            } else {
+                imageView?.imageURL = pokemon?.spriteUrlMale
             }
         case 2:
-            if let _pokemon = pokemon {
-                nameLabel?.text = _pokemon.name.capitalized
-                imageView?.imageURL = _pokemon.spriteUrlShinny
-                type1Label?.text = _pokemon.types?[0]
-                type2Label?.text = _pokemon.types?[1]
-            }
+            imageView?.imageURL = pokemon?.spriteUrlShinny
         default:
             break
         }
