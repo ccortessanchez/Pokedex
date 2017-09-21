@@ -55,33 +55,46 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IJB-bi-Cxb" userLabel="PokemonSprite">
+                                <rect key="frame" x="16" y="249" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Male"/>
+                                    <segment title="Female"/>
+                                    <segment title="Shinny"/>
+                                </segments>
+                                <connections>
+                                    <action selector="pokemonSpriteControl:" destination="JEX-9P-axG" eventType="valueChanged" id="6hC-Oc-jyB"/>
+                                </connections>
+                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[name]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spA-CG-HNO">
-                                <rect key="frame" x="16" y="249" width="343" height="31.5"/>
+                                <rect key="frame" x="16" y="292" width="343" height="31.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J33-iB-HbT">
-                                <rect key="frame" x="16" y="336.5" width="343" height="20"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEI-gB-vmB">
-                                <rect key="frame" x="16" y="364.5" width="343" height="20"/>
+                                <rect key="frame" x="16" y="379.5" width="343" height="20"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Types" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQB-iq-aRd">
-                                <rect key="frame" x="16" y="296.5" width="343" height="24"/>
+                                <rect key="frame" x="16" y="339.5" width="343" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEI-gB-vmB">
+                                <rect key="frame" x="16" y="407.5" width="343" height="20"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="spA-CG-HNO" firstAttribute="top" secondItem="IJB-bi-Cxb" secondAttribute="bottom" constant="15" id="1Dc-6v-exd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IJB-bi-Cxb" secondAttribute="trailing" id="1s4-Ed-ARm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="spA-CG-HNO" secondAttribute="trailing" id="3Mo-ym-aM3"/>
                             <constraint firstItem="AQB-iq-aRd" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="6Ub-A8-ubn"/>
                             <constraint firstItem="eln-4M-nkV" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" id="AWk-6k-wcE"/>
@@ -93,7 +106,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="J33-iB-HbT" secondAttribute="trailing" id="Mb2-aq-TGD"/>
                             <constraint firstAttribute="leadingMargin" secondItem="AEI-gB-vmB" secondAttribute="leading" id="PD8-ts-Nwp"/>
                             <constraint firstAttribute="trailing" secondItem="w5O-Iv-FmJ" secondAttribute="trailing" id="T4b-jV-MBj"/>
-                            <constraint firstItem="spA-CG-HNO" firstAttribute="top" secondItem="w5O-Iv-FmJ" secondAttribute="bottom" constant="8" id="eay-L0-WJ8"/>
+                            <constraint firstItem="IJB-bi-Cxb" firstAttribute="top" secondItem="w5O-Iv-FmJ" secondAttribute="bottom" constant="8" id="X2b-vu-Dfx"/>
                             <constraint firstItem="w5O-Iv-FmJ" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" id="ei3-kG-2m2"/>
                             <constraint firstItem="eln-4M-nkV" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="fGh-df-PgI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AEI-gB-vmB" secondAttribute="trailing" id="h6v-Sy-bFi"/>
@@ -102,6 +115,7 @@
                             <constraint firstItem="J33-iB-HbT" firstAttribute="top" secondItem="AQB-iq-aRd" secondAttribute="bottom" constant="16" id="ltH-8K-HaI"/>
                             <constraint firstItem="eln-4M-nkV" firstAttribute="height" secondItem="w5O-Iv-FmJ" secondAttribute="height" id="pp0-gQ-pr8"/>
                             <constraint firstItem="eln-4M-nkV" firstAttribute="width" secondItem="w5O-Iv-FmJ" secondAttribute="width" id="qjy-cD-cgd"/>
+                            <constraint firstItem="IJB-bi-Cxb" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="xqR-AF-feO"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -114,6 +128,7 @@
                     <connections>
                         <outlet property="imageView" destination="w5O-Iv-FmJ" id="bu0-zc-Cib"/>
                         <outlet property="nameLabel" destination="spA-CG-HNO" id="3Oi-t1-UJE"/>
+                        <outlet property="spriteSegmentedControl" destination="IJB-bi-Cxb" id="0Nj-hN-EAb"/>
                         <outlet property="type1Label" destination="J33-iB-HbT" id="0px-j0-tba"/>
                         <outlet property="type2Label" destination="AEI-gB-vmB" id="fb8-2A-Rtc"/>
                     </connections>

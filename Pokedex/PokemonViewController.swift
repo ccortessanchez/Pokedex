@@ -16,7 +16,8 @@ class PokemonViewController: UIViewController, ResourceObserver {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var type1Label: UILabel!
     @IBOutlet weak var type2Label: UILabel!
-    
+    @IBOutlet weak var spriteSegmentedControl: UISegmentedControl!
+ 
     var statusOverlay = ResourceStatusOverlay()
     
     override func viewDidLayoutSubviews() {
@@ -61,7 +62,41 @@ class PokemonViewController: UIViewController, ResourceObserver {
             type2Label?.text = _pokemon.types?[1]
         }
     }
-
+    
+    // MARK: Actions
+    
+    @IBAction func pokemonSpriteControl(_ sender: UISegmentedControl) {
+        switch spriteSegmentedControl.selectedSegmentIndex {
+        case 0:
+            if let _pokemon = pokemon {
+                nameLabel?.text = _pokemon.name.capitalized
+                imageView?.imageURL = _pokemon.spriteUrlMale
+                type1Label?.text = _pokemon.types?[0]
+                type2Label?.text = _pokemon.types?[1]
+            }
+        case 1:
+            if let _pokemon = pokemon {
+                nameLabel?.text = _pokemon.name.capitalized
+                if _pokemon.spriteUrlFemale != nil {
+                    imageView?.imageURL = _pokemon.spriteUrlFemale
+                } else {
+                    imageView?.imageURL = _pokemon.spriteUrlMale
+                }
+                type1Label?.text = _pokemon.types?[0]
+                type2Label?.text = _pokemon.types?[1]
+            }
+        case 2:
+            if let _pokemon = pokemon {
+                nameLabel?.text = _pokemon.name.capitalized
+                imageView?.imageURL = _pokemon.spriteUrlShinny
+                type1Label?.text = _pokemon.types?[0]
+                type2Label?.text = _pokemon.types?[1]
+            }
+        default:
+            break
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

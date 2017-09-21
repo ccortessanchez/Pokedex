@@ -26,7 +26,7 @@ struct Pokemon {
         types?.append(json["types"][0]["type"]["name"].string)
         
         spriteUrlMale = json["sprites","front_default"].string
-        spriteUrlFemale = json["sprites","front_default"].string
-        spriteUrlShinny = json["sprites","front_default"].string
+        spriteUrlFemale = json["sprites","front_female"].string
+        spriteUrlShinny = json["sprites","front_shiny"].string
     }
 }
