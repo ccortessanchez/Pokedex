@@ -11,15 +11,22 @@ import SwiftyJSON
 
 struct Pokemon {
     let name: String
+    let weight: String?
     var types: [String?]? = []
-    let spriteUrl: String?
+    let spriteUrlMale: String?
+    let spriteUrlFemale: String?
+    let spriteUrlShinny: String?
     
     init(json: JSON) throws {
         name = json["name"].stringValue.capitalized
         
+        weight = json["weight"].string
+        
         types?.append(json["types"][1]["type"]["name"].string)
         types?.append(json["types"][0]["type"]["name"].string)
         
-        spriteUrl = json["sprites","front_default"].string
+        spriteUrlMale = json["sprites","front_default"].string
+        spriteUrlFemale = json["sprites","front_default"].string
+        spriteUrlShinny = json["sprites","front_default"].string
     }
 }
