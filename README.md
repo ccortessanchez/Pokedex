@@ -10,8 +10,9 @@
 - [x] 1st generation 
 - [x] 2nd generation
 - [ ] Search bar
+- [ ] Tab bar
 - [ ] Order by name
-- [x] Segmented control
+- [ ] Segmented control
 
 ## License
 
