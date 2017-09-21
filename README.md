@@ -10,9 +10,9 @@
 - [x] 1st generation 
 - [x] 2nd generation
 - [ ] Search bar
-- [ ] Tab bar
+- [ ] Tab bar for pokedex by generation
 - [ ] Order by name
-- [ ] Segmented control
+- [ ] Segmented control for pokemon detail view
 
 ## License
 
