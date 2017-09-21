@@ -41,7 +41,6 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eln-4M-nkV">
                                 <rect key="frame" x="0.0" y="64" width="375" height="177"/>
-                                <color key="backgroundColor" red="0.81789996908666207" green="0.84015052356020936" blue="0.81244188614077795" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w5O-Iv-FmJ" customClass="RemoteImageView" customModule="Siesta">
                                 <rect key="frame" x="0.0" y="64" width="375" height="177"/>
