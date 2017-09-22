@@ -1,5 +1,6 @@
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg)](https://developer.apple.com/iphone/index.action)
 [![Language](http://img.shields.io/badge/language-swift-yellow.svg)](https://developer.apple.com/swift)
+[![Version](http://img.shields.io/badge/version-3.0-orange.svg)](#)
 [![License](http://img.shields.io/badge/license-MIT-lightgrey.svg)](http://mit-license.org)
 
 # Pokedex
