@@ -25,6 +25,8 @@
 - [ ] Search bar
 - [ ] Tab bar for pokedex by generation
 - [ ] Order by name
+- [ ] MVVM architecture
+- [ ] Local database
 - [x] Segmented control for pokemon detail view
 
 ## License
